@@ -1,0 +1,53 @@
+<script>
+    // 1. 전개 연산자(스프레드 연산자) ※가장 많이 사용하는 방식
+        const cat1 = {
+            name : "아옹이",
+            age : 2,
+            say(){
+                console.log("야옹");
+            }
+        }
+
+        // 원래 고양이의 필드(프로퍼티) 값을 변경
+        cat1.age = cat1.age + 1;
+        
+        // 새로운 고양이인데
+        // 나이만 cat1과 다르게 5살이다
+        // 새로운 고양이를 만들고싶어요 처음부터 만들기는 귀찮
+        const cat2 = {...cat1, age : 5}
+        /*const cat2 = {
+            name : "아옹이",
+            age : 2,
+            say(){
+                console.log("야옹");
+            }
+            age : 5
+        }*/
+        // console.log(cat2);
+        const cat3 = {
+            name : "나비",
+            hobby : "산책하기"
+        }
+        const cat4 = {...cat1, ...cat3}
+        // console.log(cat4);
+
+        // 배열도 스프레드 가능
+        const companys = ["apple", "naver", "kakao"];
+
+        const companys1 = [...companys, "meta"];
+
+        // console.log(companys1);
+
+
+        // 스프레드를 이용한 비구조화 할당
+        const [item1, ...etcConpanys] = conpany1;
+        // console.log(item1);
+        // console.log(etcConpanys);
+
+        const{name, ...noNamecat} = cat1;
+        console.log(name);
+        console.log(noNamecat);
+
+    // 2. 비동기 객체 반복 for await of(생략)
+    // 3. promise에 finally 메소드(생략)
+</script>
