@@ -76,7 +76,7 @@
 
     // 콜백 함수
     // callback
-
+1.
     // const temp = () => console.log("ㅎㅇ");
     // const temp1 = () => console.log("ㅂㅇ");
     // const myFunc = (func) => {
@@ -86,10 +86,61 @@
     // }
     // myFunc(temp);
     // myFunc(() => console.log("ㅂㅇ"));
+2.
+    // const checkName = (name, checker) => {
+    //     const result = checker(name);
+    //     console.log(result);
+    // }
 
+    // const tempName = "jaybon";
+    // const tempChecker = (name) => {
+    //     return name.indexOf("a");
+    // }
+    // checkName(tempName, tempChecker);
+    // checkName(tempName, (name) => {
+    //     return name.indexOf("n");
+    // });
 
+    // 함수를 매개변수로 받는 배열 메소드
+    // forEach, filter, map, every find, some, reduce
 
+    // for (let index = 0; index < arr.length; index++) {
+    //     console.log(arr[index]);
+    // } // ABcd
 
+    // for(const item of arr){
+    //     console.log(item);
+    // } // ABcd
+    
+    // for(const key in arr){
+    //     console.log(arr[key]);
+    // } // ABcd
+    
+    // const callback = (value, index, array) => {
+    //     console.log(value); // A B c d
+    //     console.log(index); // 0 1 2 3
+    //     console.log(array); // ['A', 'B', 'c', 'd']
+    // }
+    // arr.forEach(callback);
 
+    // arr.forEach(array => console.log(array));
 
+    // console.log(arr.filter((value) => value !== "d")); 
+    // console.log(arr.filter((value) => value == "d")); 
+
+    // const predicate = (value) => {
+    //     return value == "d";
+    // }
+    // arr.filter(predicate);
+
+    // 객체 Map과 array 메소드 map은 전혀 상관 없다
+    // 기존 데이터를 변경하거나 타입을 바궈서 배열을 만들 때 사용
+
+    // const callback = (e) => {
+    //     // return e.repeat(3); // ['AAA', 'BBB', 'ccc', 'ddd']
+    //     // return [e]; // [Array(1), Array(1), Array(1), Array(1)]
+    //     // return arr.indexOf(e); // [0, 1, 2, 3]
+    // }
+    // const result = arr.map(callback);
+    // console.log(result);
 </script>
