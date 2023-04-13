@@ -143,4 +143,62 @@
     // }
     // const result = arr.map(callback);
     // console.log(result);
+
+     var obj = {
+        // 객체가 가지고 있는 변수
+        // 필드(java, c#) or 프로퍼티(js)
+        key1 : "value1",
+        key2(){
+            this.key1;
+        },
+        // 객체가 가지고 있는 함수
+        // Method
+        key2 : function name(params) {
+            
+        },
+        
+        // 객체는 객체를 프로퍼티로 가질 수 있다
+        key3 : {
+            subKey1 : "subValue1"
+        }
+    };
+    obj?.key3?.subKey1;
+
+    // Date
+
+    // console.log(` $Date.now()  ${Date.now()} `)
+    const myDate = new Date();
+    const tempDate = new Date('2023-01-01T12:00:00.000z');
+    // console.log(myDate);
+    // console.log(tempDate);
+
+    // console.log(`myDate.getFullYear() : ${myDate.getFullYear()}`);
+    // console.log(`myDate.getMonth() : ${myDate.getMonth()}`);
+    // console.log(`myDate.getDate() : ${myDate.getDate()}`);
+    // console.log(`myDate.getDay() : ${myDate.getDay()}`);
+    // console.log(`myDate.toJSON() : ${myDate.toJSON()}`);
+    // console.log(`myDate.toJSON() : ${myDate.toLocaleString()}`);
+
+
+    // navigator
+    // window
+    // document.getElementById("");
+    // window.location.href = "";
+
+    const a = 1;
+    b = 1; // window.b = 1;
+    console.log(vindow.a);
+    console.log(vindow.b);
+
+
+
+
+
+
+
+
+
+
+
+    
 </script>
