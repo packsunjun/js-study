@@ -1,0 +1,31 @@
+<script>
+    function sol(str) {
+        // 대문자로 변환하고, 문자열을 분리하고, 정렬하고, 다시 합친다.
+        str = str.toUpperCase().split("").sort().join("");
+        // 알파벳 개수만큼 0으로 초기화된 배열을 생성한다.
+        const arr = new Array(26).fill(0);
+        // 최대값을 저장할 변수를 초기화한다.
+        let max = Number.MIN_SAFE_INTEGER;
+        // 최대값의 인덱스를 저장할 변수를 초기화한다.
+        let maxIdx = -1;
+
+        // 문자열을 순회하며 알파벳 개수를 센다.
+        for (let x of str) {
+            // 알파벳의 인덱스를 계산한다.
+            const idx = x.charCodeAt() - 65;
+            // 알파벳 개수를 증가시킨다.
+            arr[idx]++;
+            // 최대값을 갱신한다.
+            if (max < arr[idx]) {
+                max = arr[idx];
+                maxIdx = idx;
+            }
+        }
+
+        // 최대값이 중복되는 경우 "?"를 반환한다.
+        const lastIdx = arr.lastIndexOf(max);
+        if (lastIdx !== maxIdx) return "?";
+        // 최대값의 인덱스에 해당하는 알파벳을 반환한다.
+        return String.fromCharCode(maxIdx + 65);
+    }
+</script>
