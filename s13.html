@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <button onclick="add()"> 내용추가</button>
+        <input id="num" type="text" placeholder="번호를 입력하세요.">
+        <button onclick="remove()">내용삭제</button>
+    </div>
+    <!-- veforebegin -->
+    <div id="content">
+        <!-- afterbegin -->
+        <p>내용입니다.</p>
+        <!-- beforeend -->
+    </div>
+    <!-- afterend -->
+</body>
+<script>
+
+    let globalCount = 0; // 전역 변수 globalCount를 0으로 초기화
+
+    const add = () => { // add 함수 정의
+        globalCount++; // globalCount 증가
+
+        const contentTag = document.getElementById("content"); // contentTag 변수에 id가 content인 요소 할당
+
+        contentTag.insertAdjacentHTML( // contentTag에 HTML 삽입
+            "beforeend", // 삽입 위치
+            `<p id="child${globalCount}" >${globalCount}번 추가 내용입니다.</p>` // 삽입할 HTML
+        );
+
+    }
+
+    const remove = () => { // remove 함수 정의
+        const contentTag = document.getElementById("content"); // contentTag 변수에 id가 content인 요소 할당
+        const numTag = document.getElementById("num"); // numTag 변수에 id가 num인 요소 할당
+
+        const deleteTag = document.getElementById("child" + numTag.value); // deleteTag 변수에 id가 child + numTag.value인 요소 할당
+
+        if (deleteTag != null) { // deleteTag가 null이 아니면
+            contentTag.removeChild(deleteTag); // contentTag에서 deleteTag 삭제
+        } else { // deleteTag가 null이면
+            alert("잘못된 요청입니다."); // 경고창 출력
+        }
+    }
+</script>
+
+</html>
